@@ -1,0 +1,128 @@
+form{
+    width: 363px;
+    height: 351px;
+    background: #FFFFFF;
+    border: 1px solid #E9ECEF;
+    padding: 38px 24.5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+}
+form > label{
+  font-size: 13px;
+  font-family: 'inter';
+  font-weight: 500;
+  color: #212529;
+  margin: 0px 0px 12.1px 2px;
+  line-height: 22px;
+}
+form > input{
+  background-color: #F8F9FA;
+    border: none;
+    outline: none;
+    padding: 12.4px 16px;
+    border-radius: 8px;
+    width: 314px;
+    height: 52px;
+}
+form > input::placeholder{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #868E96;
+}
+form > span {
+  font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #868E96;
+    margin-top: 4.4px;
+}
+.values{
+  display: flex;
+  margin-top: 17.7px;
+}
+.value{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.value > label{
+  margin-bottom: 9px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.value > input{
+  background-color: #F8F9FA;
+  border: none;
+  outline: none;
+  padding: 12.4px 36px 12.4px 16px;
+  border-radius: 8px;
+  width: 128px;
+  height: 48px;
+}
+.value > input::placeholder{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #868E96;
+}
+.value > span{
+  position: absolute;
+  bottom: 13px;
+  left: 96px;
+  color: #343A40;
+}
+.type__of__value{
+  display: flex;
+  flex-direction: column;
+}
+.type__of__value > label {
+  margin-left: 36px;
+  margin-bottom: 9px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.type__of__value > select{
+  background-color: #F8F9FA;
+  border: none;
+  outline: none;
+  padding: 12.4px 16px;
+  border-radius: 8px;
+  width: 150px;
+  margin-left: 36px;
+  color: #868E96;
+}
+form > button{
+  color: white;
+  background-color: #FD377E;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 1rem;
+  margin-top: 19px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  width: 314px;
+}
+form > button:hover{
+  background-color:#E34981;
+}
