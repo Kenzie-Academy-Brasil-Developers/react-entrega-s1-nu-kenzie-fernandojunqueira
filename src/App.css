@@ -162,4 +162,10 @@ main{
   .first{
     width: 100%;
   }
+  .second{
+    width: 100%;    
+  }
+  .menu > h2{
+    display: none;
+  }
 }
