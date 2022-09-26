@@ -13,19 +13,13 @@ function App() {
     { description: "Salário recebido", type: "entrada", value: 2500 },
     { description: "Conta de luz", type: "saída", value: -150 }
   ])
+  const [filter,setFilter] = useState("")
+
+  const newListTransaction = listTransactions.filter(transaction => filter === '' ? true : transaction.type === filter)
+
+  
 
   const sum = listTransactions.reduce((act,acc) => act + acc.value,0)
-
-  function all(){
-    setListTransaction(listTransactions.filter(transaction => typeof(transaction.type) === 'string'))
-  }
-
-  function filterEntry(){
-    setListTransaction(listTransactions.filter(transaction => transaction.type === 'entrada'))
-  }
-  function filterOut(){
-    setListTransaction(listTransactions.filter(transaction => transaction.type === 'saída'))
-  }
 
   const [isLandPage,setIsLandPage] = useState(true)
  
@@ -43,9 +37,9 @@ function App() {
         </div>
       </header>
       <main>
-        <aside>
+        <aside className='first'>
 
-       <Form um={listTransactions} dois={setListTransaction}/>
+       <Form listTransactions={listTransactions} setListTransaction={setListTransaction}/>
         <section className='total__money'>
           <div className='total__money--div'>
             <h2>Valor total: </h2>
@@ -54,16 +48,16 @@ function App() {
           <p>O valor se refere ao saldo</p>
         </section>
         </aside>
-        <aside>
+        <aside className='second'>
         <div className='menu'>
           <h2>Resumo financeiro</h2>
           <nav>
-            <button type='button' onClick={all}>Todos</button>
-            <button type = 'button' onClick={filterEntry}>Entradas</button>
-            <button type = 'button' onClick={filterOut}>Despesas</button>
+            <button type='button' onClick={() => setFilter('')}>Todos</button>
+            <button type = 'button' onClick={() => setFilter('entrada')}>Entradas</button>
+            <button type = 'button' onClick={() => setFilter('saída')}>Despesas</button>
           </nav>
         </div>
-        <List listTransactions = {listTransactions} setListTransaction = {setListTransaction}/>
+        <List newListTransactions = {newListTransaction} setListTransaction = {setListTransaction} filter = {filter} setFilter = {setFilter}/>
         </aside>
 
       </main>

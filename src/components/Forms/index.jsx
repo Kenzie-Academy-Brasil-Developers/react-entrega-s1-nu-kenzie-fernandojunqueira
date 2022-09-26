@@ -1,7 +1,7 @@
 import './styles.css'
 import { useState } from 'react'
 
-const Form = (props) => {
+const Form = ({listTransactions,setListTransaction}) => {
 
 
     const [description, setDescription] = useState('')
@@ -11,7 +11,7 @@ const Form = (props) => {
     function handleSubmit (e){
         e.preventDefault()
     
-        props.dois([...props.um,{ description: description, type: type, value: Number(value) }])
+        setListTransaction([...listTransactions,{ description: description, type: type, value: Number(value) }])
         setDescription('')
         setValue('')
     

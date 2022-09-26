@@ -7,6 +7,7 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 39px;
+    max-width: 100%;
 }
 form > label{
   font-size: 13px;
@@ -24,6 +25,7 @@ form > input{
     border-radius: 8px;
     width: 314px;
     height: 52px;
+    max-width: 100%;
 }
 form > input::placeholder{
   font-family: 'Inter';
@@ -122,7 +124,20 @@ form > button{
   font-weight: 500;
 
   width: 314px;
+  max-width: 100%;
 }
 form > button:hover{
   background-color:#E34981;
+}
+
+@media (width < 1024px){
+  form{
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (width < 597px){
+  form{
+    height: 100%;
+  }
 }

@@ -1,7 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import './styles.css'
 
-const List = ({listTransactions,setListTransaction}) => {
+const List = ({newListTransactions,setListTransaction,filter,setFilter}) => {
 
     function btnTrash(id){
 
@@ -12,14 +12,16 @@ const List = ({listTransactions,setListTransaction}) => {
 
     return (
         <ul>
-          {listTransactions.map((transaction,index) => {
+          
+          { newListTransactions.map((transaction,index) => {
 
+            
             const colorBorder = transaction.type === 'entrada' ? "green" : ''
 
             return (
             <li  className={`${colorBorder}`} key={index}>
               <div className='description'>
-                <h2>{transaction.description} - Mês Dezembro</h2>
+                <h2>{transaction.description}</h2>
                 <p>{transaction.type}</p>
               </div>
               <div className='show__values'>

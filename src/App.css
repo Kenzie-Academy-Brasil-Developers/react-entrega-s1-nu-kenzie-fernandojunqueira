@@ -25,7 +25,7 @@ header{
   
 }
 .container{
-  width: 73%;
+  width: 80%;
   margin: 0 auto;
   height: 100%;
 
@@ -49,10 +49,15 @@ header{
 main{
   display: flex;
   justify-content: space-between;
-  width: 73%;
+  width: 80%;
   margin: 0 auto;
 }
-
+.first{
+  width: 48%;
+}
+.second{
+  width: 50%;
+}
 
 .total__money{
   width: 363px;
@@ -62,6 +67,7 @@ main{
   border-radius: 4px;
   margin-top: 16px;
   padding: 20px 24px 18px 24px;
+  max-width: 100%;
 }
 .total__money .total__money--div{
   display: flex;
@@ -99,6 +105,12 @@ main{
   width: 560px;
   align-items: center;
   justify-content: space-between;
+  max-width: 100%;
+}
+.menu > h2{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu nav > button{
   background-color: #E9ECEF;
@@ -127,9 +139,27 @@ main{
   gap: 16px;
 }
 
-@media (width < 769px){
+@media (width < 1024px){
   main{
     flex-direction: column;
+    align-items: center;
+  }
+  .first{
+    width: 70%;
+  }
+  .total__money{
+    width: 100%;
+  }
+  .second{
+    width: 70%;
   }
 
+}
+@media(width < 597px ) {
+  main{
+    width: 90%;
+  }
+  .first{
+    width: 100%;
+  }
 }
